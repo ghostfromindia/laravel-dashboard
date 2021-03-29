@@ -3,7 +3,7 @@
     "description": "Laravel Dashboard with login/register with preinstalled dashboard template",
     "type": "library",
     "require": {
-	"laravel/laravel" : "8.*"
+	"laravel/laravel" : "8.*",
         "yajra/laravel-datatables-oracle": "v9.15.2",
         "intervention/image": "^2.5",
         "arrilot/laravel-widgets": "3.13.1"
