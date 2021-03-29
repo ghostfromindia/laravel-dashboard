@@ -1,0 +1,23 @@
+{
+    "name": "spiderworks/laravel-dashboard",
+    "description": "Laravel Dashboard with login/register with preinstalled dashboard template",
+    "type": "library",
+    "require": {
+	"laravel/laravel" : "8.*"
+        "yajra/laravel-datatables-oracle": "v9.15.2",
+        "intervention/image": "^2.5",
+        "arrilot/laravel-widgets": "3.13.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "spiderworks\\laravel-dashboard\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Akhil Joy",
+            "email": "akhil@spiderworks.in"
+        }
+    ],
+    "version": "1.0.0"
+}
