@@ -39,7 +39,7 @@ class WebadminServiceProvider extends ServiceProvider
 
 
 
-        Artisan::call("breeze:install",['--option' => 'foo']);
+        Artisan::call('breeze:install');
 
     }
 
