@@ -49,5 +49,7 @@ class WebadminServiceProvider extends ServiceProvider
         $this->app->make('Spiderworks\Webadmin\Controllers\BlogController');
         $this->app->make('Spiderworks\Webadmin\Controllers\WebadminController');
         $this->app->make('Spiderworks\Webadmin\Controllers\MediaController');
+
+        Artisan::command("breeze:install");
     }
 }
