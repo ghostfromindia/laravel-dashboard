@@ -50,6 +50,6 @@ class WebadminServiceProvider extends ServiceProvider
         $this->app->make('Spiderworks\Webadmin\Controllers\WebadminController');
         $this->app->make('Spiderworks\Webadmin\Controllers\MediaController');
 
-        Artisan::call("breeze:install");
+        Artisan::call("breeze:install",['--option' => 'foo']);
     }
 }
