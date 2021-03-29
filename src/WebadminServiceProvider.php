@@ -11,6 +11,8 @@ use Arrilot\Widgets\ServiceProvider as ArrilotServiceProvider;
 
 use Artisan;
 
+use Illuminate\Console\Scheduling\Schedule;
+
 class WebadminServiceProvider extends ServiceProvider
 {
     /**
@@ -39,7 +41,7 @@ class WebadminServiceProvider extends ServiceProvider
 
 
 
-        Artisan::call('breeze:install');
+
 
     }
 
