@@ -1,5 +1,5 @@
 {
-    "name": "spiderworks/laravel-dashboard",
+    "name": "spiderwork/laravel-dashboard",
     "description": "Laravel Dashboard with login/register with preinstalled dashboard template",
     "type": "library",
     "require": {
@@ -10,7 +10,7 @@
     },
     "autoload": {
         "psr-4": {
-            "spiderworks\\laravel-dashboard\\": "src/"
+            "spiderwork\\laravel-dashboard\\": "src/"
         }
     },
     "authors": [
