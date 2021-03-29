@@ -1,7 +1,7 @@
 {
     "name": "spiderwork/laravel-dashboard",
     "description": "Laravel Dashboard with login/register with preinstalled dashboard template",
-    "type": "library",
+    "type": "project",
     "require": {
 	"laravel/laravel" : "8.*",
         "yajra/laravel-datatables-oracle": "v9.15.2",
