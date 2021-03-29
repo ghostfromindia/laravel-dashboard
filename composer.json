@@ -1,16 +1,23 @@
 {
     "name": "spiderwork/laravel-dashboard",
-    "description": "Laravel Dashboard with login/register with preinstalled dashboard template",
-    "type": "project",
+    "description": "Admin package for basic functionality",
+    "type": "library",
     "require": {
-	"laravel/laravel" : "8.*",
         "yajra/laravel-datatables-oracle": "v9.15.2",
         "intervention/image": "^2.5",
-        "arrilot/laravel-widgets": "3.13.1"
+        "arrilot/laravel-widgets": "3.13.1",
+        "laravel/breeze" : "1.1.4"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Spiderworks\\Webadmin\\WebadminServiceProvider"
+            ]
+        }
     },
     "autoload": {
         "psr-4": {
-            "spiderwork\\laravel-dashboard\\": "src/"
+            "Spiderworks\\Webadmin\\": "src/"
         }
     },
     "authors": [
