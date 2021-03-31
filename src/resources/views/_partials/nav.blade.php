@@ -3,10 +3,8 @@
     <div class="sidebar-header">
 
         {{config('app.name')}}
-        <div class="sidebar-header-controls">
-            <button type="button" class="btn btn-xs sidebar-slide-toggle btn-link m-l-20" data-pages-toggle="#appMenu">
-                <i class="fa fa-angle-down fs-16"></i>
-            </button>
+        <div class="sidebar-header-controls" style="padding-left:80px">
+
             <button type="button" class="btn btn-link d-lg-inline-block d-xlg-inline-block d-md-inline-block d-sm-none d-none" data-toggle-pin="sidebar"><i class="fa fs-12"></i>
             </button>
         </div>

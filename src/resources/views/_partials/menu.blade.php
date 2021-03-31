@@ -6,7 +6,7 @@
 				<span class="arrow"></span>
 			@endif
 		</a>
-		<span class="icon-thumbnail"><i class="{{$item->icon}}"></i></span>
+		<span class="icon-thumbnail">{{substr($item->name,0,2)}}</span>
 		@if(isset($item->children))
 			<ul class="sub-menu">
 		    	@include('spiderworks.webadmin._partials.menu', ['items'=>$item->children, 'parent'=>$parent, 'cur_url'=>$cur_url])

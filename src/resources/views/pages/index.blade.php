@@ -2,7 +2,6 @@
 
 @section('content')
     <div class="container-fluid">
-        <div class="container">
             <!-- START card -->
             <div class="col-md-12" style="margin-bottom: 20px;" align="right">
                 <span class="page-heading">All Pages</span>
@@ -52,7 +51,6 @@
                 </div>
             </div>
             <!-- END card -->
-        </div>
     </div>
 @endsection
 @section('bottom')

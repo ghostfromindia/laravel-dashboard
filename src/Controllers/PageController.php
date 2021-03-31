@@ -51,16 +51,20 @@ class PageController extends Controller
         return $this->initDTData($collection)
         	->addColumn('sub-pages', function($obj) use ($route) {
                 $has_child = $this->model->where('parent_id', '=', $obj->id)->count();
-                return '<a href="' . route( $route . '.index',  [$obj->id] ) . '" class="btn btn-info btn-sm" >Sub-Pages (' . $has_child . ')</a>'; 
+                if($has_child > 0){
+                    return '<a href="' . route( $route . '.index',  [$obj->id] ) . '" class="" >' . $has_child . ' sub pages</a>';
+                }else{
+                    return '<a href="' . route( $route . '.index',  [$obj->id] ) . '" class="" >No sub pages</a>';
+                }
             })
             ->addColumn('action_delete_category', function($obj) use ($route) { 
                 $has_child = $this->model->where('parent_id', '=', $obj->id)->count();
                 if($has_child)
                 {
-                    return '<button type="button" class= "btn btn-danger btn-sm delete_have_child" title="Created at : ' . date('d/m/Y - h:i a', strtotime($obj->created_at)) . '" > <i class="fa fa-trash"></i></button>';
+                    return '<button type="button" class= "btn-sm delete_have_child" title="Created at : ' . date('d/m/Y - h:i a', strtotime($obj->created_at)) . '" > <i class="fa fa-trash"></i></button>';
                 }
                 else{
-                     return '<a href="' . route( $route . '.destroy',  [$obj->id] ) . '" class="btn btn-danger webadmin-btn-warning-popup" data-message="Are you sure to delete?  Associated data will be removed if it is deleted." title="' . ($obj->updated_at ? 'Last updated at : ' . date('d/m/Y - h:i a', strtotime($obj->updated_at)) : '') . '" ><i class="fa fa-trash"></i></a>';  
+                     return '<a href="' . route( $route . '.destroy',  [$obj->id] ) . '" class="webadmin-btn-warning-popup" data-message="Are you sure to delete?  Associated data will be removed if it is deleted." title="' . ($obj->updated_at ? 'Last updated at : ' . date('d/m/Y - h:i a', strtotime($obj->updated_at)) : '') . '" ><i class="fa fa-trash"></i></a>';
                 }
             })
             ->rawColumns(['action_edit', 'action_delete_category', 'status', 'sub-pages']);

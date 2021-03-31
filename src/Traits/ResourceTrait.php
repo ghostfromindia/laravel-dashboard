@@ -52,17 +52,17 @@ trait ResourceTrait {
             ->editColumn('status', function($obj) use($route) { 
                 if($obj->status == 1)
                 {
-                    return '<a href="' . route($route.'.change-status', [encrypt($obj->id)]).'" class="btn btn-success btn-sm webadmin-btn-warning-popup" data-message="Are you sure, want to disable this record?"><i class="fa fa-check-circle"></i></a>'; 
+                    return '<a href="' . route($route.'.change-status', [encrypt($obj->id)]).'" class=" btn-sm webadmin-btn-warning-popup" data-message="Are you sure, want to disable this record?"><i class="fa fa-check-circle"></i></a>';
                 }
                 else{
-                    return '<a href="' . route($route.'.change-status', [encrypt($obj->id)]) . '" class="btn btn-danger btn-sm webadmin-btn-warning-popup" data-message="Are you sure, want to enable this record?"><i class="fa fa-times-circle"></i></a>';
+                    return '<a href="' . route($route.'.change-status', [encrypt($obj->id)]) . '" class=" btn-sm webadmin-btn-warning-popup" data-message="Are you sure, want to enable this record?"><i class="fa fa-times-circle"></i></a>';
                 }
             })
             ->addColumn('action_edit', function($obj) use ($route, $queries) { 
-                return '<a href="'.route($route.'.edit', [encrypt($obj->id)]).'" class="btn btn-info" title="' . ($obj->updated_at ? 'Last updated at : ' . date('d/m/Y - h:i a', strtotime($obj->updated_at)) : ''). '" ><i class="fa fa-pencil"></i></a>';
+                return '<a href="'.route($route.'.edit', [encrypt($obj->id)]).'" class="" title="' . ($obj->updated_at ? 'Last updated at : ' . date('d/m/Y - h:i a', strtotime($obj->updated_at)) : ''). '" ><i class="fa fa-pencil"></i></a>';
             })
             ->addColumn('action_delete', function($obj) use ($route, $queries) { 
-                return '<a href="'.route($route.'.destroy', [encrypt($obj->id)]).'" class="btn btn-danger webadmin-btn-warning-popup" data-message="Are you sure to delete?  Associated data will be removed if it is deleted." title="' . ($obj->updated_at ? 'Last updated at : ' . date('d/m/Y - h:i a', strtotime($obj->updated_at)) : '') . '"><i class="fa fa-trash"></i></a>';
+                return '<a href="'.route($route.'.destroy', [encrypt($obj->id)]).'" class="webadmin-btn-warning-popup" data-message="Are you sure to delete?  Associated data will be removed if it is deleted." title="' . ($obj->updated_at ? 'Last updated at : ' . date('d/m/Y - h:i a', strtotime($obj->updated_at)) : '') . '"><i class="fa fa-trash"></i></a>';
             });
 	}
 

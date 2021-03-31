@@ -2,8 +2,6 @@
 
 @section('content')
     <div class="container-fluid">
-        <div class="container">
-
             <div class="col-md-12 p-0"  align="right" style="margin-bottom: 20px; ">
               <span class="page-heading">Global Settings</span>
               <div >
@@ -41,7 +39,6 @@
                     </table>
             </div>
             <!-- END card -->
-        </div>
     </div>
 @endsection
 @section('bottom')

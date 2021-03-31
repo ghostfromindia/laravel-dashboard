@@ -11,27 +11,34 @@
 @endsection
 @section('content')
     <div class="container-fluid">
-        <div class="container">
             <!-- START card -->
-            <div class="card card-borderless padding-15">
-                    <!-- Default box -->
-                <div class="box">
-                  <div class="box-header with-border">
-                    <div class="upload-wrapper">
-                      <div id="error_output"></div>
-                          <!-- file drop zone -->
-                      <div id="dropzone" class="dropzone-wrapper">
-                              <i>Drop files here</i>
-                              <i class="sm-text">or</i>
-                              <!-- upload button -->
-                              <span class="button btn-blue input-file">
+
+        <div class="box-header with-border">
+            <div class="upload-wrapper">
+                <div id="error_output"></div>
+                <!-- file drop zone -->
+                <div id="dropzone" class="dropzone-wrapper">
+                    <i>Drop files here</i>
+                    <i class="sm-text">or</i>
+                    <!-- upload button -->
+                    <span class="button btn-blue input-file">
                                   Browse Files <input type="file" id="fileupload" name="files[]" data-url="{{ route('spiderworks.webadmin.media.save')}}" multiple />
                               </span>
-                      </div>
-                      <input type="hidden" id="popupType" value="main">
-                          <!-- The container for the uploaded files -->
-                    </div>
-                  </div>
+                </div>
+                <input type="hidden" id="popupType" value="main">
+                <!-- The container for the uploaded files -->
+            </div>
+        </div>
+
+
+
+
+        <div class="card card-borderless padding-15">
+                    <!-- Default box -->
+
+
+
+                <div class="box">
                   <div class="box-body">
                       <div id="files" class="files col-md-12"></div>
                       <div class="media-list-head row">
@@ -57,7 +64,6 @@
                 </div><!-- /.box -->
             </div>
             <!-- END card -->
-        </div>
     </div>
 @endsection
 @section('bottom')

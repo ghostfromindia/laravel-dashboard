@@ -24,12 +24,75 @@
     <link  href="{{asset('webadmin/assets/css/style.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('webadmin/css/styles.css')}}" rel="stylesheet" type="text/css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+        body{
+            font-family: 'Roboto', sans-serif;
+        }
         .table thead tr th{
             color: #2c2d2f;
         }
         textarea.form-control{
             min-height: 75px !important;
         }
+        .dropzone-wrapper {
+            margin: 20px 50px;
+            border: 2px #d9d9d9 dotted;
+            padding: 40px;
+            text-align: center;
+            background: azure;
+            display: block;
+        }
+        .delete-btn{
+            background: red;
+            padding: 0px 5px;
+            color: white;
+            display: block;
+            top: 0px;
+            right: unset;
+        }
+
+        .edit-btn{
+            padding: 0px 5px;
+            background: green;
+            position: absolute;
+            color: white;
+            display: block;
+            left: 20px;
+            top:0px;
+            right: unset;
+        }
+        .media-preview-wrap img, .thumbnail img {
+            width: 100%;
+            height: 100px;
+            object-fit: contain;
+            border: 1px solid #ddd;
+        }
+        .attachment-preview {
+            width: 150px !important;
+            height: 100px !important;
+        }
+
+        .table tbody tr td {
+            background: #fff;
+            border-bottom: 1px solid rgba(225, 225, 226, 0.7);
+            border-top: 0px;
+            padding: 5px 0px;
+            font-size: 13.5px;
+        }
+
+        .dataTables_info{
+            float: left;
+            position: absolute;
+            left: 0px;
+        }
+
+        @media only screen and (min-width: 768px){
+            form .row [class*='col-']:first-child {
+                padding-left: 7px;
+            }
+        }
+
+
     </style>
 </head>
 <body class="fixed-header menu-pin">
@@ -107,7 +170,7 @@
         <div class=" container-fluid  container-fixed-lg footer">
             <div class="copyright sm-text-center">
                 <p class="small no-margin pull-left sm-pull-reset">
-                    <span class="hint-text">Copyright &copy; {{date('Y')}} </span>
+                    <span class="hint-text">Copyright &copy; {{date('Y')}}, Version 2.0.0 | </span>
                     <span class="font-montserrat">SpiderWorks</span>.
                     <span class="hint-text">All rights reserved. </span>
                 </p>

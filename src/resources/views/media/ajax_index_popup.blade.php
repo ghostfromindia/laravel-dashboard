@@ -1,5 +1,5 @@
 @foreach($files as $key=>$file)
-	<div class="col-md-3 media-previe-wrap">
+	<div class="col-md-1 media-previe-wrap">
 		<div class="thumbnail text-center">
 			@if($file->media_type == "Image")
 				<img src="{{ asset('public/'.$file->thumb_file_path) }}" class="checkable" id="{{$file->id}}" data-extra-attr="{{$holder_attr}}" data-original-src="{{ asset('public/'.$file->file_path) }}">
